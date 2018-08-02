@@ -11,10 +11,10 @@ import io.circe.parser._
 import Futures._
 
 object Main extends App {
-  case class DiscoverResponse(page: Int, total_results: Int, total_pages: Int, results: List[MovieTvShow])
-  case class MovieTvShow(id: Int)
-  case class MovieTvShowCredits(id: Int, cast: List[Actor])
   case class Actor(id: Int, name: String)
+  case class MovieTvShowCredits(id: Int, cast: List[Actor])
+  case class MovieTvShow(id: Int)
+  case class DiscoverResponse(page: Int, total_results: Int, total_pages: Int, results: List[MovieTvShow])
 
   private val apiKey = "===API Key==="
   // TODO: Use joda library's DateTime to be typesafe
