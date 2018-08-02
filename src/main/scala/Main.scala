@@ -95,7 +95,11 @@ object Main extends App {
       // TODO: Figure out what to do with failed responses (lefts)
       (lefts, rights) = allCredits.partition(_.isLeft)
     } yield {
-      rights.map(_.right.get).flatMap(_.cast).map(_.id).toSet
+      rights
+        .map(_.right.get)
+        .flatMap(_.cast)
+        .map(_.id)
+        .toSet
     }
   }
 
