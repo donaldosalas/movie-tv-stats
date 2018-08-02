@@ -11,6 +11,7 @@ import io.circe.parser._
 import Futures._
 
 object Main extends App {
+  // Used to decode JSON responses
   case class Actor(id: Int, name: String)
   case class MovieTvShowCredits(id: Int, cast: List[Actor])
   case class MovieTvShow(id: Int)
